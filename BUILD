@@ -1,16 +1,5 @@
-licenses(["notice"])
+licenses(["notice"]) # Apache 2.0
+
+package(default_visibility = ["//visibility:public"])
 
 exports_files(["LICENSE"])
-
-cc_library(
-    name = "snappy",
-    srcs = glob(
-        ["**/*.cc"],
-	exclude = ["snappy-test.cc", "snappy_unittest.cc"],
-    ),
-    hdrs = glob(
-        ["**/*.h"],
-	exclude = ["snappy-test.h"],
-    ),
-)
-
